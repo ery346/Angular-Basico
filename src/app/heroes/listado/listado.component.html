@@ -1,0 +1,19 @@
+<p>listado Personajes de Dragon BALLS!</p>
+
+<ul>
+    <li *ngFor="let heroe of personajes; let i = index">
+           {{ i + 1 }} {{ heroe }}
+    </li>
+</ul>
+
+    <button (click)="borrarPersonaje()">Borrar</button>
+
+    <div *ngIf="personajBorrado; else noBorrado">
+        <h3>Personaje Borrado: <small>{{ personajBorrado }}</small> </h3>
+    </div>
+
+    <ng-template #noBorrado> No ha borrado nada</ng-template>
+    
+
+
+
